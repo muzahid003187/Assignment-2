@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f3ef;
+    color: #333;
+    line-height: 1.5;
+}
+
+.search-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 14px;
+    border: 1px solid #cfc9bd;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #333;
+}
+
+.search-box button {
+    padding: 10px 22px;
+    margin-left: 6px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f4e5f;
+    color: #fff;
+    font-size: 15px;
+}
+
+.search-box button:hover {
+    background-color: #163a47;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.drinks-section {
+    width: 75%;
+}
+
+.group-section {
+    width: 25%;
+    background-color: #fff;
+    border: 1px solid #e3ded4;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.group-section p {
+    font-size: 17px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e3ded4;
+}
+
+.drink-count {
+    background-color: #1f4e5f;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+#group-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0ece3;
+    font-size: 14px;
+    color: #444;
+}
+
+.cart-img {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+#drink-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#drink-container h2 {
+    color: #666;
+    font-weight: normal;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e3ded4;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card h3 {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #222;
+}
+
+.card p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #666;
+}
+
+.card button {
+    margin-top: 12px;
+    margin-right: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f4e5f;
+    color: #fff;
+    font-size: 13px;
+}
+
+.card button:hover {
+    background-color: #163a47;
+}
+
+.card button:disabled {
+    background-color: #b9b2a5;
+    cursor: default;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    width: 500px;
+    max-width: 90%;
+    margin: 80px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    color: #999;
+    line-height: 1;
+}
+
+.close:hover {
+    color: #333;
+}
+
+#modal-body {
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#modal-body h2 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+#modal-body p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+#modal-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .drinks-section,
+    .group-section {
+        width: 100%;
+    }
+
+    #drink-container {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box input {
+        max-width: 70%;
+    }
+}
